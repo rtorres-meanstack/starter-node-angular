@@ -135,14 +135,6 @@ function sshConnect() {
         return Promise.reject(failed.join(', '));
       }
     })
-    .then(function(status) {
-      if (status) {
-        console.log('Installing Nginx');
-        return installNginx();
-      } else {
-        return Promise.reject(failed.join(', '));
-      }
-    })
     .then(function() {
       console.log('DEPLOYMENT COMPLETE!');
       process.exit(0);

@@ -8,6 +8,7 @@ cache:
 sudo: false
 install:
   - npm install
+  - npm install bson
 script:
   - npm test
 deploy:
